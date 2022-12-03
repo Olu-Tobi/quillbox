@@ -53,6 +53,7 @@ margin-right: 15px;
 
 const UserP = styled.p`
 margin-top: 8px;
+color:black;
 
 @media screen and (max-width: 600px) {
     margin-top:0.5rem;

@@ -13,6 +13,8 @@ background-color: whitesmoke;
 
 @media screen and (max-width: 600px) {
     background-color:white ;
+    min-width:100vw;
+    max-width: 100vw;
     }
 `
 const LoginContainer = styled.div`

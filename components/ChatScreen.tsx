@@ -35,6 +35,9 @@ const Picker = dynamic(
 
 const Container = styled.div`
 
+@media screen and (max-width: 600px) {
+    height:90vh;
+    }
 `
 const Header = styled.div`
 position: sticky;
@@ -65,8 +68,9 @@ flex: 1;
 
 const MessageContainer = styled.div`
     padding: 30px;
-    background-color: #aa8c8c52;
+    background-color: grey;
     min-height: 90vh;
+    overflow-y: scroll;
 
     @media screen and (max-width: 600px) {
     padding:30px 10px;
@@ -228,7 +232,7 @@ const ChatScreen =  ({chat, messages}:any) => {
         )
     }
         <HeaderInfo>
-            <h3 >{recipient?.displayName}</h3>
+            <h3 style={{color: 'black'}}>{recipient?.displayName}</h3>
             {recipientSnapshot ? (
                 <p>Last active: {' '}
                 {recipient?.lastSeen?.toDate()? (

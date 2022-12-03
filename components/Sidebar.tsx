@@ -25,6 +25,7 @@ height: 100vh;
 min-width: 300px;
 max-width: 300px;
 overflow: scroll;
+background-color: white;
 
 
 ::-webkit-scrollbar{

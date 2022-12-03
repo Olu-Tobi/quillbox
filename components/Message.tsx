@@ -16,6 +16,7 @@ display: flex;
 align-items: center;
 min-height: 45px;
 max-height: fit-content;
+color: black;
 
 position: relative;
 text-align: left;
