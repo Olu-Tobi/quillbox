@@ -87,6 +87,26 @@ const Header = styled.div`
   align-items: center;
   padding: 50px 20px 90px;
   height: 80px;
+
+  @media screen and (max-width: 600px) {
+    
+    
+      }
+  
+`
+
+const Header2 = styled.div`
+  display: flex;
+  position: sticky;
+  top: 0;
+  background-color:#20c6c6;
+  z-index: 1;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 20px;
+  height: 80px;
+
+  
   
 `
 
@@ -100,6 +120,7 @@ margin-top: 2.5rem;
 @media screen and (max-width: 600px) {
     
   width: 100vw;
+  margin: 0;
     }
 
 `
@@ -329,7 +350,7 @@ const Sidebar =  () => {
     </Container>
     
     <Container2 style={{display: isClicked ? 'flex' : 'none' }}>
-    <Header style={{width:'100%'}}><HeaderDiv><ArrowBackIcon style={{color:'white'}} onClick={() => setIsClicked(false)}/> <h2 style={{color:'white'}}>Quillbox</h2></HeaderDiv></Header>
+    <Header2 style={{width:'100%'}}><HeaderDiv><ArrowBackIcon style={{color:'white'}} onClick={() => setIsClicked(false)}/> <h2 style={{color:'white'}}>Quillbox</h2></HeaderDiv></Header2>
       <div style={{display:'flex', alignItems:'center', justifyContent:'center', marginTop: '4rem', border:'2px solid gold', borderTop:'none', borderRight:'none', borderRadius:'50%', width:'3.5rem', height:'3.5rem'}}><UserAvatar src={user?.photoURL}/></div>
        <p style={{display:'flex', alignItems:'center', color:'grey', margin:'0', marginTop:'1rem'}}><PersonIcon style={{ marginRight:'5px'}}/>{user?.displayName}</p>
        <p style={{display:'flex', alignItems:'center', color: 'grey', margin:'0', marginTop:'0.5rem'}}><EmailIcon style={{ marginRight:'5px'}}/> {user?.email}</p>

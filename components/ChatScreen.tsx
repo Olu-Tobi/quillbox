@@ -35,9 +35,6 @@ const Picker = dynamic(
 
 const Container = styled.div`
 
-@media screen and (max-width: 600px) {
-    height:80vh;
-    }
 `
 const Header = styled.div`
 position: sticky;
@@ -73,7 +70,8 @@ flex: 1;
 const MessageContainer = styled.div`
     padding: 30px;
     background-color: grey;
-    min-height: 90vh;
+    
+    height: 85vh;
     overflow-y: scroll;
 
     @media screen and (max-width: 600px) {

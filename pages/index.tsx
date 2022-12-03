@@ -22,7 +22,7 @@ export default function Home() {
   return (
     <div >
       <Head>
-        <title>Chatrgram</title>
+        <title>Quillbox</title>
         <meta name="" content="" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
