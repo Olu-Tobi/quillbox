@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import styled from "styled-components";
 import {Avatar, IconButton, Button } from '@mui/material';
 import ChatIcon from '@mui/icons-material/Chat';
@@ -198,7 +198,8 @@ const Sidebar =  () => {
   const userChatRef = db.collection('chats').where('users', 'array-contains', user!.email);
   const [chatSnapshot] = useCollection(userChatRef as any);
   
-  
+  const [isVisible, setIsVisible] = useState(true);
+  const storagePath = "hideDiv ";
   const [isClicked, setIsClicked] = useState(false);
   const [reveal, setReveal] = useState(false);
  
@@ -208,28 +209,45 @@ const Sidebar =  () => {
       const existingChat = !!chatSnapshot?.docs
       .find((chat) => chat.data().users.find((user: any) => 
       user === recipientEmail)?.length > 0);
-
+      
       return existingChat;
+
+      
      
     }
 
 
   const createChat = () => {
+   
+    
     const input = prompt('Please enter an email address for the user you wish to chat with');
 
     if (!input) return null;
+
+    
 
     if (EmailValidator.validate(input) && !chatAlreadyExists(input) && input !== user!.email) {
         // TODO: where we add chats to the db chats collection
         db.collection('chats').add({
           users: [user!.email, input],
         })
+
+       
     }
 
-   
-
+    
 
   }
+
+  useEffect(() => {
+    const hideDiv = localStorage.getItem(storagePath);
+    setIsVisible(!hideDiv);
+  }, []);
+
+  const handleClose = () => {
+    setIsVisible(false);
+    localStorage.setItem(storagePath, '1');
+  };
 
 
 
@@ -281,11 +299,13 @@ const Sidebar =  () => {
      
        <ChatCon >
         <div style={{borderTopLeftRadius: '10px',borderTopRightRadius: '10px', backgroundColor:'white'}}>
-       
-       {chatSnapshot?.docs.map((chat) => (
-            <Chat key={chat.id} id={chat.id} users={chat.data().users} />
-        ))}
 
+        
+       
+       { isVisible ? <em style={{color:'grey', display: "flex" , alignItems:'center', justifyContent:"center", height:'50vh'}}>No contacts yet...</em>
+            :chatSnapshot?.docs.map((chat) => (
+            <Chat key={chat.id} id={chat.id} users={chat.data().users} />
+        )) }
         </div>
         
         
@@ -297,7 +317,7 @@ const Sidebar =  () => {
 
 
         <IconButton>
-              <SidebarButton>
+              <SidebarButton onClick={handleClose}>
               <ChatIcon 
                 onClick= {createChat}/>
               </SidebarButton>
