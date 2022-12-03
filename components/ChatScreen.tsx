@@ -168,6 +168,7 @@ const ChatScreen =  ({chat, messages}:any) => {
 
          setInput("");
          scrollToBottom();
+         
 
     }
 
@@ -272,7 +273,8 @@ const ChatScreen =  ({chat, messages}:any) => {
         value = {input} onChange={handleChange} placeholder = 'Message'/>
         
 
-        <button  
+       <div onClick={() => setShowPicker(false)}>
+       <button  
         
         type="submit" 
         onClick={sendMessage}
@@ -288,7 +290,8 @@ const ChatScreen =  ({chat, messages}:any) => {
             width:'2.2rem',
             height:'2.2rem',
         }}
-        ><SendIcon style={{fontSize:'1.2rem'}}/></button>
+        disabled={!input}><SendIcon style={{fontSize:'1.2rem'}}/></button>
+       </div>
         
        </InputContainer> 
 
