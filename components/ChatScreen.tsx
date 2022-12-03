@@ -49,6 +49,10 @@ padding: 11px;
 height: 80px;
 align-items: center;
 border-bottom: 1px solid whitesmoke;
+
+@media screen and (max-width: 600px) {
+    height: 60px;
+    }
 `
 
 const HeaderInfo = styled.div`
