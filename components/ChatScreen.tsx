@@ -114,7 +114,7 @@ const ChatScreen =  ({chat, messages}:any) => {
     const [user] = useAuthState(auth as any);
     const [input, setInput]= useState("")
     const [showPicker, setShowPicker] = useState(false)
-    const endOfMessagesRef = useRef(null)
+    const endOfMessagesRef = useRef<HTMLDivElement>(null)
     const router = useRouter();
 
 
