@@ -323,7 +323,7 @@ const Sidebar =  () => {
 
         
        
-       { isVisible ? <em style={{color:'grey', display: "flex" , alignItems:'center', justifyContent:"center", height:'50vh'}}>No contacts yet...</em>
+       { isVisible ? <em style={{color:'grey', display: "flex" , alignItems:'center', justifyContent:"center", height:'50vh'}}>No chats yet...</em>
             :chatSnapshot?.docs.map((chat) => (
             <Chat key={chat.id} id={chat.id} users={chat.data().users} />
         )) }
@@ -337,15 +337,15 @@ const Sidebar =  () => {
       
 
 
-        <IconButton>
-              <SidebarButton onClick={handleClose}>
+        <IconButton onClick={handleClose}>
+              <SidebarButton >
               <ChatIcon 
                 onClick= {createChat}/>
-              </SidebarButton>
+             </SidebarButton>
             </IconButton>
        </ChatCon>
       
-
+ 
         
     </Container>
     
