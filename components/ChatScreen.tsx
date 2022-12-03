@@ -34,7 +34,7 @@ const Picker = dynamic(
 //import getRecipientEmail from '../utils/getRecipientEmail'
 
 const Container = styled.div`
-height: 80vh;
+
 `
 const Header = styled.div`
 position: sticky;
@@ -71,7 +71,7 @@ const MessageContainer = styled.div`
     padding: 30px;
     background-color: grey;
     
-    height: 85vh;
+    height: 80vh;
     overflow-y: scroll;
 
     @media screen and (max-width: 600px) {
