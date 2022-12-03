@@ -3,12 +3,12 @@ import 'firebase/compat/auth';
 import 'firebase/compat/firestore';
 
 const firebaseConfig = {
-    apiKey: process.env.NEXT_PUBLIC_API_KEY,
-    authDomain: process.env.NEXT_PUBLIC_AUTH_DOMAIN,
-    projectId: process.env.NEXT_PUBLIC_PROJECT_ID,
-    storageBucket: process.env.NEXT_PUBLIC_STORAGE_BUCKET ,
-    messagingSenderId: process.env.NEXT_PUBLIC_MESSAGING_SENDER_ID,
-    appId: process.env.NEXT_PUBLIC_APP_ID
+    apiKey: "AIzaSyCONdvE2Lmuj8txJLDbQWUOSfy5On2kTlU",
+    authDomain: "chatrgram-3b00d.firebaseapp.com",
+    projectId: "chatrgram-3b00d",
+    storageBucket: "chatrgram-3b00d.appspot.com" ,
+    messagingSenderId: "91649183840",
+    appId: "1:91649183840:web:b8b1525c0dc1845c2e3305"
   };
 
   const app = !firebase.apps.length 
