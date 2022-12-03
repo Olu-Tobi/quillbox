@@ -214,7 +214,7 @@ const ChatScreen =  ({chat, messages}:any) => {
         }
 
 
-    const onEmojiClick = ({event, emojiObject}:any) => {
+    const onEmojiClick = (event:any, emojiObject:any) => {
         setInput(prevInput => prevInput + emojiObject.emoji);
         
     }
