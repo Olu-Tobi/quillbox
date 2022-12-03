@@ -114,7 +114,7 @@ const ChatScreen =  ({chat, messages}:any) => {
     const [user] = useAuthState(auth as any);
     const [input, setInput]= useState("")
     const [showPicker, setShowPicker] = useState(false)
-    const endOfMessagesRef = useRef(null)  as MutableRefObject<HTMLDivElement>
+    const endOfMessagesRef = useRef<HTMLDivElement>(null)
     const router = useRouter();
 
 
@@ -130,7 +130,7 @@ const ChatScreen =  ({chat, messages}:any) => {
 
 
     const scrollToBottom = () => {
-        endOfMessagesRef.current.scrollIntoView({
+        endOfMessagesRef.current!.scrollIntoView({
             behavior :"smooth",
             block: "start",
         } ) 
