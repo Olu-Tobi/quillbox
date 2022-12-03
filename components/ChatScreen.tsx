@@ -71,11 +71,12 @@ const MessageContainer = styled.div`
     padding: 30px;
     background-color: grey;
     
-    height: 80vh;
+    height: 90vh;
     overflow-y: scroll;
 
     @media screen and (max-width: 600px) {
     padding:30px 10px;
+    height: 75vh;
     }
 `
 const EndOfMessage = styled.div`
@@ -92,8 +93,13 @@ align-items: center;
 padding: 10px;
 position: sticky;
 bottom:0;
-background-color: white;
+background-color: #ffffff;
 z-index: 100;
+
+@media screen and (max-width: 600px) {
+
+    padding-bottom: 12vh;
+    }
 `
 const Input = styled.input`
 flex: 1;
