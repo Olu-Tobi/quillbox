@@ -36,7 +36,7 @@ const Picker = dynamic(
 const Container = styled.div`
 
 @media screen and (max-width: 600px) {
-    height:90vh;
+    height:80vh;
     }
 `
 const Header = styled.div`
