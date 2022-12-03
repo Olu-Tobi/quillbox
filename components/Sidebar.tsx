@@ -321,7 +321,7 @@ const Sidebar =  () => {
        <ChatCon >
         <div style={{borderTopLeftRadius: '10px',borderTopRightRadius: '10px', backgroundColor:'white'}}>
 
-        <em style={{color:'grey', display: "flex" , alignItems:'center', justifyContent:'center', height:'6vh', fontSize:'0.8rem'}}>Click the button below to add new chats...</em>
+        <em style={{color:'grey', display: "flex" , alignItems:'center', justifyContent:'center', height:'8vh', fontSize:'0.8rem'}}>Click the button below to add new chats...</em>
        
        {  
             chatSnapshot?.docs.map((chat) => (
