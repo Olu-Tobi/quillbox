@@ -204,10 +204,11 @@ const Sidebar =  () => {
  
 
   const chatAlreadyExists = (recipientEmail: any) => {
-      !!chatSnapshot?.docs
+      const existingChat = !!chatSnapshot?.docs
       .find((chat) => chat.data().users.find((user: any) => 
       user === recipientEmail)?.length > 0);
 
+      return existingChat;
      
     }
 
