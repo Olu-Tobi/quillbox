@@ -1,4 +1,4 @@
-import React from 'react'
+
 import styled from 'styled-components'
 import { Avatar } from '@mui/material'
 import firebase from 'firebase/compat/app';

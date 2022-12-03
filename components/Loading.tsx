@@ -1,6 +1,4 @@
-import React from 'react'
 
-import { Circle } from 'better-react-spinkit';
 
 
 
@@ -14,7 +12,7 @@ const Loading = () => {
             
             />
 
-            {/* <Circle color="#3cbc28" size={60} style={{display: 'flex', justifyContent: 'center'}} /> */}
+          
         </div>
     </div>
   )
