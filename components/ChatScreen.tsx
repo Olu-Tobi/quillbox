@@ -110,6 +110,7 @@ background-color: #e1dede;
 padding: 12px;
 margin-left: 15px;
 margin-right: 15px;
+color: black;
 `
 const BackIcon = styled.a`
     display: none;
