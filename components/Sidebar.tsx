@@ -219,8 +219,8 @@ const Sidebar =  () => {
   const userChatRef = db.collection('chats').where('users', 'array-contains', user!.email);
   const [chatSnapshot] = useCollection(userChatRef as any);
   
-  const [isVisible, setIsVisible] = useState(true);
-  const storagePath = "hideDiv ";
+  // const [isVisible, setIsVisible] = useState(true);
+  // const storagePath = "hideDiv ";
   const [isClicked, setIsClicked] = useState(false);
   const [reveal, setReveal] = useState(false);
  
@@ -260,15 +260,15 @@ const Sidebar =  () => {
 
   }
 
-  useEffect(() => {
-    const hideDiv = localStorage.getItem(storagePath);
-    setIsVisible(!hideDiv);
-  }, []);
+  // useEffect(() => {
+  //   const hideDiv = localStorage.getItem(storagePath);
+  //   setIsVisible(!hideDiv);
+  // }, []);
 
-  const handleClose = () => {
-    setIsVisible(false);
-    localStorage.setItem(storagePath, '1');
-  };
+  // const handleClose = () => {
+  //   setIsVisible(false);
+  //   localStorage.setItem(storagePath, '1');
+  // };
 
 
 
@@ -321,10 +321,10 @@ const Sidebar =  () => {
        <ChatCon >
         <div style={{borderTopLeftRadius: '10px',borderTopRightRadius: '10px', backgroundColor:'white'}}>
 
-        
+        <em style={{color:'grey', display: "flex" , alignItems:'center', justifyContent:'center', height:'6vh', fontSize:'0.8rem'}}>Click the button below to add new chats...</em>
        
-       { isVisible ? <em style={{color:'grey', display: "flex" , alignItems:'center', justifyContent:"center", height:'50vh'}}>No chats yet...</em>
-            :chatSnapshot?.docs.map((chat) => (
+       {  
+            chatSnapshot?.docs.map((chat) => (
             <Chat key={chat.id} id={chat.id} users={chat.data().users} />
         )) }
         </div>
@@ -336,8 +336,8 @@ const Sidebar =  () => {
       
       
 
-
-        <IconButton onClick={handleClose}>
+        {/* onClick={handleClose} */}
+        <IconButton > 
               <SidebarButton >
               <ChatIcon 
                 onClick= {createChat}/>
