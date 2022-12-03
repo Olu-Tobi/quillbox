@@ -34,7 +34,7 @@ const Picker = dynamic(
 //import getRecipientEmail from '../utils/getRecipientEmail'
 
 const Container = styled.div`
-
+height: 80vh;
 `
 const Header = styled.div`
 position: sticky;
