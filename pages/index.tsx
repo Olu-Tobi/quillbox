@@ -10,7 +10,7 @@ justify-content: center;
 height:100vh; 
 width: 100vw;
 flex-direction: column;
-background: #e9e8e850;
+background: #ffffff;
 @media screen and (max-width: 600px) {
     display: none;
     }

@@ -25,12 +25,7 @@ position: relative;
     background-color: #e9eaeb42;
 }
 
-@media screen and (max-width: 600px) {
-    
-    
-    margin: 0.2rem 0 0;
-    
-    }
+
 `
 
 const UserAvatar = styled(Avatar)`
@@ -116,7 +111,8 @@ const Chat = ({ id, users }:any )  => {
         )
     }
         
-        <UserP>{recipient?.displayName}</UserP></ContainerEdit>
+        <UserP>{recipient?.displayName}</UserP>
+        </ContainerEdit>
 
         {recipientSnapshot && (
                 <Em> {' '}

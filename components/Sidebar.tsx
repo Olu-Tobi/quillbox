@@ -85,13 +85,14 @@ const Header = styled.div`
   z-index: 1;
   justify-content: space-between;
   align-items: center;
-  padding: 50px 20px 90px;
-  height: 80px;
+  padding: 50px 20px ;
+  height: 70px;
 
   @media screen and (max-width: 600px) {
     
-    
-      }
+    padding: 50px 20px ;
+ 
+  }
   
 `
 
@@ -103,10 +104,15 @@ const Header2 = styled.div`
   z-index: 1;
   justify-content: space-between;
   align-items: center;
-  padding: 50px 20px;
+  padding: 50px 10px;
   height: 80px;
+  width:100%;
 
-  
+  @media screen and (max-width: 600px) {
+    
+    padding: 50px 20px ;
+ 
+  }
   
 `
 
@@ -114,8 +120,13 @@ const HeaderDiv = styled.div`
 display: flex;
 align-items: center;
 justify-content: space-between;
-width: 19.5vw;
-margin-top: 2.5rem;
+width: 21vw;
+
+@media screen and (max-width: 1024px) {
+    
+    width: 40vw;
+ 
+      }
 
 @media screen and (max-width: 600px) {
     
@@ -201,11 +212,25 @@ position: absolute;
 top: 6rem;
 width: 18.75rem;
 z-index: 1;
+
+
+
 @media screen and (max-width: 600px) {
     
-    top: 6rem;
+    
     width: 100vw;
     }
+`
+
+const Em = styled.em`
+color: grey; 
+display: flex ;
+align-items: center;
+justify-content: center;
+height: 8vh;
+font-size: 0.8rem;
+
+
 `
 
 const Sidebar =  () => {
@@ -321,7 +346,7 @@ const Sidebar =  () => {
        <ChatCon >
         <div style={{borderTopLeftRadius: '10px',borderTopRightRadius: '10px', backgroundColor:'white'}}>
 
-        <em style={{color:'grey', display: "flex" , alignItems:'center', justifyContent:'center', height:'8vh', fontSize:'0.8rem'}}>Click the button below to add new chats...</em>
+        <Em style={{}}>Click the button below to add new chats...</Em>
        
        {  
             chatSnapshot?.docs.map((chat) => (
@@ -350,7 +375,7 @@ const Sidebar =  () => {
     </Container>
     
     <Container2 style={{display: isClicked ? 'flex' : 'none' }}>
-    <Header2 style={{width:'100%'}}><HeaderDiv><ArrowBackIcon style={{color:'white'}} onClick={() => setIsClicked(false)}/> <h2 style={{color:'white'}}>Quillbox</h2></HeaderDiv></Header2>
+    <Header2 ><HeaderDiv><ArrowBackIcon style={{color:'white'}} onClick={() => setIsClicked(false)}/> <h2 style={{color:'white'}}>Quillbox</h2></HeaderDiv></Header2>
       <div style={{display:'flex', alignItems:'center', justifyContent:'center', marginTop: '4rem', border:'2px solid gold', borderTop:'none', borderRight:'none', borderRadius:'50%', width:'3.5rem', height:'3.5rem'}}><UserAvatar src={user?.photoURL}/></div>
        <p style={{display:'flex', alignItems:'center', color:'grey', margin:'0', marginTop:'1rem'}}><PersonIcon style={{ marginRight:'5px'}}/>{user?.displayName}</p>
        <p style={{display:'flex', alignItems:'center', color: 'grey', margin:'0', marginTop:'0.5rem'}}><EmailIcon style={{ marginRight:'5px'}}/> {user?.email}</p>
