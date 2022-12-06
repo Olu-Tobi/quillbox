@@ -76,6 +76,17 @@ align-items: center;
 -ms-overflow-style:none;
 scrollbar-width: none;
 
+@media screen and (max-width: 1024px) {
+    
+    min-width: 30vw;
+    max-width: 30vw;
+
+    > p{
+      font-size: 0.9rem;
+    }
+ 
+  }
+
 @media screen and (max-width: 600px) {
     
     min-width: 100vw;
@@ -95,6 +106,12 @@ const Header = styled.div`
   padding: 50px 20px ;
   height: 70px;
 
+  @media screen and (max-width: 1024px) {
+    
+    padding: 50px 5px ;
+ 
+  }
+  
   @media screen and (max-width: 600px) {
     
     padding: 50px 20px ;
@@ -158,14 +175,7 @@ justify-content: space-between;
 
 `
 
-const Search = styled.div`
-display: flex;
-align-items: center;
-padding: 5px 20px;
-border-radius: 2px;
-border-bottom: 1px solid whitesmoke;
 
-`
 const SearchInput = styled.input`
 outline-width: 0;
 border: none;
