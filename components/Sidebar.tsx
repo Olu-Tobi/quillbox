@@ -256,6 +256,12 @@ font-size: 0.8rem;
   font-size: 0.7rem;
     }
 
+    @media screen and (max-width: 600px) {
+    
+    
+    font-size: 0.8rem;
+      }
+
 
 `
 
