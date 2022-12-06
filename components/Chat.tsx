@@ -50,9 +50,15 @@ const UserP = styled.p`
 margin-top: 8px;
 color:black;
 
+@media screen and (max-width: 1024px) {
+    
+    
+    font-size: 0.8rem;
+      }
+
 @media screen and (max-width: 600px) {
     margin-top:0.5rem;
-    font-size: 1.2rem;
+    font-size: 1rem;
     margin-left: 0.6rem;
     margin-bottom:0.5rem;
 }

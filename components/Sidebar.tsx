@@ -36,6 +36,13 @@ background-color: white;
 -ms-overflow-style:none;
 scrollbar-width: none;
 
+@media screen and (max-width: 1024px) {
+    
+    min-width: 30vw;
+    max-width: 30vw;
+ 
+  }
+
 @media screen and (max-width: 600px) {
     
     min-width: 100vw;
@@ -190,6 +197,14 @@ top: 35rem;
 left: 14rem;
 cursor: pointer; 
 box-shadow: 0 2px 3px 0 grey;
+
+
+@media screen and (max-width: 1024px) {
+    
+         top: 50%;
+        left: 20%;
+    
+      }
   
 @media screen and (max-width: 600px) {
     
@@ -213,7 +228,11 @@ top: 6rem;
 width: 18.75rem;
 z-index: 1;
 
-
+@media screen and (max-width: 1024px) {
+    
+    
+    width: 30vw;
+    }
 
 @media screen and (max-width: 600px) {
     
@@ -229,6 +248,13 @@ align-items: center;
 justify-content: center;
 height: 8vh;
 font-size: 0.8rem;
+
+
+@media screen and (max-width: 1024px) {
+    
+    
+  font-size: 0.7rem;
+    }
 
 
 `

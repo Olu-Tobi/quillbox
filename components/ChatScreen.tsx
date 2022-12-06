@@ -76,7 +76,7 @@ const MessageContainer = styled.div`
 
     @media screen and (max-width: 600px) {
     padding:30px 10px;
-    height: 77vh;
+    
     }
 `
 const EndOfMessage = styled.div`
@@ -96,10 +96,7 @@ bottom:0;
 background-color: #ffffff;
 z-index: 100;
 
-@media screen and (max-width: 600px) {
 
-    padding-bottom:10vh;
-    }
 `
 const Input = styled.input`
 flex: 1;
