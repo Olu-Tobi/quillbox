@@ -58,12 +58,15 @@ flex: 1;
 
 > h3{
     margin-bottom: 1px;
+    color: black;
+    font-size: 0.9rem;
 }
 
 > p{
     font-size: 14px;
     color: grey;
     margin-top: 1px;
+    font-size: 0.8rem;
 }
 `
 
@@ -239,9 +242,9 @@ const ChatScreen =  ({chat, messages}:any) => {
         )
     }
         <HeaderInfo>
-            <h3 style={{color: 'black'}}>{recipient?.displayName}</h3>
+            <h3 >{recipient?.displayName}</h3>
             {recipientSnapshot ? (
-                <p>Last active: {' '}
+                <p >Last active: {' '}
                 {recipient?.lastSeen?.toDate()? (
                     <TimeAgo datetime={recipient?.lastSeen?.toDate()}/>
                 ) : "Unavailable"}
